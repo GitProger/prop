@@ -56,8 +56,9 @@ func stack_NewStruct(_buffer *SomeSmallStruct) *SomeSmallStruct {
 func foo(...) ... {
     var _buf SomeSmallStruct
     v := stack_NewStruct(&_buf) // `stack_NewStruct` choosen by the compiler instead of `NewStruct`
-                                //      as hs pointer does not leave `foo` function
+    ...                         //      as hs pointer does not leave `foo` function
     vOut := heap_NewStruct()    // `NewStruct_Heap` choosen by the compiler
+    ...
 }
 
 ```
