@@ -64,12 +64,12 @@ func foo(...) ... {
 
 Results (go1.22.1):
 ```
-goos: linux                                                                                       
-goarch: amd64                                                                                     
-pkg: allocs                                                                                       
-cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz                                               
-BenchmarkOldFoo-8         648730              1574 ns/op            8192 B/op          2 allocs/op
-BenchmarkNewFoo-8        1463098               845.0 ns/op          4096 B/op          1 allocs/op
-PASS                                                                                              
-ok      allocs  3.111s  
+goos: linux
+goarch: amd64
+pkg: allocs
+cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+BenchmarkOldFoo-8       14548387               132.9 ns/op            64 B/op          2 allocs/op
+BenchmarkNewFoo-8       15364522                79.40 ns/op           32 B/op          1 allocs/op
+PASS
+ok      allocs  3.323s
 ```

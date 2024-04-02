@@ -4,7 +4,7 @@ type User struct {
     ID     uint64
     Name   string
     Age    int
-    bytes  [4000]byte
+    // bytes  [4000]byte
 }
 
 func Adult(u *User) bool {
