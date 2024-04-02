@@ -61,6 +61,21 @@ func foo(...) ... {
     ...
 }
 
+
+```
+
+or in other way:
+```go
+
+func foo(...) ... {
+    var _buf SomeSmallStruct
+    v := stack_NewStruct(&_buf)
+    ...
+
+    var _buf2 SomeSmallStruct
+    vOut := stack_NewStruct(&_buf2) // _buf2 will be allocated at the heap by escape-analysis, as vOut leaves foo
+    ...
+}
 ```
 
 Results (go1.22.1):
