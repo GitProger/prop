@@ -23,5 +23,3 @@ func BenchmarkNewFoo(b *testing.B) {
         }
     }
 }
-
-// go test -bench=. -benchmem
